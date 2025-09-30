@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Easy Apply</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>LinkedIn Easy Apply</h1>
+      <p class="subtitle">Auto-apply to jobs with Easy Apply</p>
+    </header>
+    
+    <div class="content">
+      <div class="status">
+        <div class="status-item">
+          <span class="label">Status:</span>
+          <span id="status" class="value">Inactive</span>
+        </div>
+        <div class="status-item">
+          <span class="label">Jobs Applied:</span>
+          <span id="appliedCount" class="value">0</span>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <button id="toggleBtn" class="btn btn-primary">
+          Start Auto-Apply
+        </button>
+        
+        <button id="resetBtn" class="btn btn-secondary">
+          Reset Counter
+        </button>
+      </div>
+      
+      <div class="info">
+        <h3>How to use:</h3>
+        <ol>
+          <li>Navigate to LinkedIn Jobs search page</li>
+          <li>Filter for "Easy Apply" jobs</li>
+          <li>Click "Start Auto-Apply" button</li>
+          <li>Review applications before final submission</li>
+        </ol>
+        
+        <div class="warning">
+          ⚠️ <strong>Important:</strong> This extension highlights Easy Apply buttons. 
+          Please review each application carefully before submitting.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
