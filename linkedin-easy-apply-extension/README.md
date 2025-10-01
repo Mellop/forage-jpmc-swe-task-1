@@ -5,9 +5,13 @@ A Chrome extension that helps you apply to jobs on LinkedIn using the Easy Apply
 ## Features
 
 - **Easy Apply Detection**: Automatically detects and highlights Easy Apply buttons on LinkedIn job listings
-- **Auto-Apply Mode**: Option to automatically click Easy Apply buttons (with safety controls)
+- **Auto-Apply Mode**: Automatically clicks Easy Apply buttons and completes multi-step applications
+- **Multi-Step Application Handling**: Automatically clicks "Next" buttons and navigates through application steps
+- **Smart Form Detection**: Pauses when required fields need user input, then continues when filled
+- **Auto-Submit**: Automatically submits applications when all steps are complete
+- **Job Queue Processing**: Automatically moves to the next job after completing an application
 - **Application Tracking**: Keeps count of jobs you've applied to
-- **Safety First**: Designed to require user review before final submission
+- **Safety First**: Waits for user input on required fields before proceeding
 - **User-Friendly Interface**: Clean popup interface to control the extension
 
 ## Installation
@@ -35,8 +39,10 @@ A Chrome extension that helps you apply to jobs on LinkedIn using the Easy Apply
 3. **Review Applications**
    - The extension will highlight Easy Apply buttons
    - It will open the Easy Apply modal when activated
-   - **Important**: Always review the application details before final submission
-   - The extension is designed for safety and will not auto-submit without review
+   - **Multi-Step Applications**: The extension will automatically click "Next" to progress through steps
+   - **User Input Required**: When required fields are empty, the extension pauses and waits for you to fill them
+   - **Auto-Submit**: Once all steps are complete and fields are filled, the extension submits the application
+   - **Next Job**: After submission, the extension automatically moves to the next job
 
 4. **Track Your Progress**
    - View the number of applications started in the popup
@@ -49,7 +55,9 @@ A Chrome extension that helps you apply to jobs on LinkedIn using the Easy Apply
 - This extension is designed as an assistive tool, not for spam applications
 - Always review each job posting carefully before applying
 - Customize your resume and cover letter for each position when possible
-- The extension requires user interaction and review for final submission
+- The extension will pause when it encounters required fields that need input
+- Fill in required fields (marked with *) when the extension pauses
+- The extension automatically completes multi-step applications and submits them
 - Use responsibly and in accordance with LinkedIn's Terms of Service
 
 ## File Structure
@@ -94,9 +102,10 @@ This extension:
 ## Limitations
 
 - Only works with LinkedIn's "Easy Apply" feature
-- Requires manual review for multi-step applications
-- Does not automatically fill out custom questions
+- Pauses on multi-step applications when required fields need user input
+- Cannot automatically fill custom questions or upload documents
 - Rate limiting may apply based on LinkedIn's policies
+- Automatically submits applications once all required fields are complete
 
 ## Development
 
